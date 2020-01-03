@@ -38,7 +38,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => MyCard(args: arguments));
         break;
       case canReturnRoute:
-        return MaterialPageRoute(builder: (_)=> CanReturn());
+        var arguments = settings.arguments;
+        return MaterialPageRoute(builder: (_)=> CanReturn(title: arguments));
         break;
       case serviceComingRoute:
         var arguments = settings.arguments;
@@ -58,9 +59,9 @@ class Router {
 //      case contactUsRoute:
 //        return MaterialPageRoute(builder: (_) => );
 //        break;
-      case logOutRoute:
-        return MaterialPageRoute(builder: (_) => Login());
-        break;
+//      case logOutRoute:
+//        return MaterialPageRoute(builder: (_) => Login());
+//        break;
       default:
         return MaterialPageRoute(builder: (_) => Scaffold(
           body: Center(

@@ -110,7 +110,8 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-        )),
+        ),
+        ),
         ListTile(
           leading: Icon(Icons.shopping_cart),
           title: Text(regularOH),
@@ -140,12 +141,12 @@ class _HomeState extends State<Home> {
           title: Text(canReturn),
           onTap: () {
             Navigator.of(context).pop();
-            Navigator.pushNamed(context, canReturnRoute);
+            Navigator.pushNamed(context, canReturnRoute, arguments: 'Can Return');
           },
         ),
         Divider(),
         Padding(
-            padding: EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
+            padding: EdgeInsets.only(left: 15.0, top: 15.0, bottom: 15.0),
             child: Text(emeSpecial)),
         ListTile(
           leading: Icon(Icons.group_add),
@@ -176,7 +177,7 @@ class _HomeState extends State<Home> {
         ),
         Divider(),
         Padding(
-            padding: EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
+            padding: EdgeInsets.only(left: 15.0, top: 15.0, bottom: 15.0),
             child: Text(communicate)),
         ListTile(
           leading: Icon(Icons.share),
@@ -203,7 +204,7 @@ class _HomeState extends State<Home> {
           title: Text(logOut),
           onTap: () {
             Navigator.of(context).pop();
-            Navigator.pushNamed(context, logOutRoute);
+            Navigator.of(context).pushNamedAndRemoveUntil(loginRoute, (Route<dynamic> route) => false);
           },
         ),
       ],

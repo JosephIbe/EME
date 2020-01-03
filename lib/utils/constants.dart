@@ -18,7 +18,7 @@ const String canReturnRoute = '/can_return';
 const String shareAppRoute = '/share_app';
 const String contactUsRoute = '/contact_us';
 const String TNCRoute = '/terms_n_conditions';
-const String logOutRoute = '/logOut';
+//const String logOutRoute = '/logOut';
 const String serviceComingRoute = '/service_coming';
 
 /**

@@ -28,8 +28,8 @@ class MyEme extends StatelessWidget {
         title: 'EME Water App',
         debugShowCheckedModeBanner: false,
         onGenerateRoute: Router.generateRoute,
-      home: isFirstLaunch ? Intro() : Home(),
-//        home: Home(),
+//      home: isFirstLaunch ? Intro() : Home(),
+        home: Home(),
       ),
     );
 
